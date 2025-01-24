@@ -9,11 +9,10 @@ export default function Page() {
 
   // MessagePackメッセージを準備して送信
   const sendMessagePackMessage = async () => {
-    // C#の型に合わせたデータ構造
     const message = {
-      instance_id: 1, // 適当なインスタンスID
-      time_stamp: Date.now(), // 現在のタイムスタンプ
-      type: 0, // Union型（PropOperationParamEntity）
+      type: 0, // Unionタイプ: PropOperationParamEntity
+      instance_id: 1,
+      time_stamp: Date.now(),
       position: { x: 1.0, y: 2.0, z: 3.0 },
       rotation: { x: 0.0, y: 0.0, z: 0.0 },
       scale: { x: 1.0, y: 1.0, z: 1.0 },
