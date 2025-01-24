@@ -62,7 +62,7 @@ export default function Page() {
 
   return (
     <div className="text-center p-8 pb-20 gap-4 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <h1 className="text-2xl">Save JSON & Send UDP</h1>
+      <h1 className="text-2xl">Save JSON & Send JSON via UDP</h1>
       <div className="my-4">
         <label className="block">Host:</label>
         <input

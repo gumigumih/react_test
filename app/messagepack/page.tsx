@@ -9,6 +9,7 @@ export default function Page() {
 
   // MessagePackメッセージを準備して送信
   const sendMessagePackMessage = async () => {
+    // C#の新しい型定義に基づいたデータ
     const message = {
       type: 0, // Unionタイプ: PropOperationParamEntity
       instance_id: 1,
@@ -43,7 +44,7 @@ export default function Page() {
 
   return (
     <div className="text-center p-8 pb-20 gap-4 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <h1 className="text-2xl">Send MessagePack</h1>
+      <h1 className="text-2xl">Send MessagePack via TCP</h1>
 
       <div className="my-4">
         <label className="block">Host:</label>
