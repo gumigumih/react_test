@@ -23,7 +23,7 @@ export default function Page() {
     const messagePackData = msgpack.encode(message);
 
     try {
-      const response = await fetch("/api/messagepack-tcp-send", {
+      const response = await fetch("/api/messagepack-websocket-send", {
         method: "POST",
         headers: {
           "Content-Type": "application/json", // JSONで送信
@@ -44,7 +44,7 @@ export default function Page() {
 
   return (
     <div className="text-center p-8 pb-20 gap-4 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <h1 className="text-2xl">Send MessagePack via TCP</h1>
+      <h1 className="text-2xl">Send MessagePack via Websocket</h1>
 
       <div className="my-4">
         <label className="block">Host:</label>
