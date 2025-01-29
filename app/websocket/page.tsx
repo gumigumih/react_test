@@ -17,7 +17,7 @@ export default function Page() {
   const sendMessagePackMessage = async () => {
     // C#の新しい型定義に基づいたデータ
     const message = [
-      0,  // Unionタグ (0 = PropOperationParamEntity)
+      unionTag,  // Unionタグ (0 = PropOperationParamEntity)
       [
         instanceId,  // instance_id
         Date.now(),  // time_stamp
