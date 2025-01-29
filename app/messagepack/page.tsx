@@ -12,11 +12,13 @@ export default function Page() {
     // C#の新しい型定義に基づいたデータ
     const message = [
       0,  // Unionタグ (0 = PropOperationParamEntity)
-      1,  // instance_id
-      Date.now(),  // time_stamp
-      [1.0, 2.0, 3.0],  // position [X, Y, Z]
-      [0.0, 0.0, 0.0],  // rotation [X, Y, Z]
-      [1.0, 1.0, 1.0]   // scale [X, Y, Z]
+      [
+        1,  // instance_id
+        Date.now(),  // time_stamp
+        [1.0, 2.0, 3.0],  // position [X, Y, Z]
+        [0.0, 0.0, 0.0],  // rotation [X, Y, Z]
+        [1.0, 1.0, 1.0]   // scale [X, Y, Z]
+      ]
     ];
 
     // MessagePackエンコード
