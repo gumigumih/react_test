@@ -7,6 +7,8 @@ export default function Page() {
   const [host, setHost] = useState("127.0.0.1");
   const [port, setPort] = useState(12345);
 
+  const [unionTag, setUnionTag] = useState(0);
+  const [instanceId, setInstanceId] = useState(1);
   const [position, setPosition] = useState({ x: 1.5, y: 2.0, z: 3.0 });
   const [rotation, setRotation] = useState({ x: 0.0, y: 0.0, z: 0.0 });
   const [scale, setScale] = useState({ x: 1.0, y: 1.0, z: 1.0 });
@@ -17,7 +19,7 @@ export default function Page() {
     const message = [
       0,  // Unionタグ (0 = PropOperationParamEntity)
       [
-        1,  // instance_id
+        instanceId,  // instance_id
         Date.now(),  // time_stamp
         [position.x, position.y, position.z],  // position [X, Y, Z]
         [rotation.x, rotation.y, rotation.z],  // rotation [X, Y, Z]
@@ -65,6 +67,24 @@ export default function Page() {
           type="number"
           value={port}
           onChange={(e) => setPort(Number(e.target.value))}
+          className="border p-2"
+        />
+      </div>
+      <div className="my-4 flex justify-center items-center space-x-3">
+        <label>UnionTag:</label>
+        <input
+          type="number"
+          value={unionTag}
+          onChange={(e) => setUnionTag(Number(e.target.value))}
+          className="border p-2"
+        />
+      </div>
+      <div className="my-4 flex justify-center items-center space-x-3">
+        <label>InstanceId:</label>
+        <input
+          type="number"
+          value={instanceId}
+          onChange={(e) => setInstanceId(Number(e.target.value))}
           className="border p-2"
         />
       </div>
